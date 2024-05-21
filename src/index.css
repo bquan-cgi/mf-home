@@ -14,6 +14,10 @@
   button {
     @apply text-red-600 bg-gray-300 m-4 p-2;
   }
+
+  aside li {
+    @apply text-3xl p-2 m-2 hover:bg-sky-700;
+  }
 }
 
 @layer components {
