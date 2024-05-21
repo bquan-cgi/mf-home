@@ -5,6 +5,8 @@ import Nav from "./Nav";
 import HomeContent from "./HomeContent";
 import App1Home from "app1/App1Home";
 import App1Content from "app1/App1Content";
+import App2Home from "app2/App2Home";
+import App2Content from "app2/App2Content";
 import About from "./About";
 import ErrorPage from "./ErrorPage";
 
@@ -25,6 +27,8 @@ export default function MainLayout() {
                 {/* <Route index element={<HomeContent></HomeContent>} /> */}
                 <Route path="app1" element={<App1Home />} />
                 <Route path="app1content" element={<App1Content />} />
+                <Route path="app2" element={<App2Home />} />
+                <Route path="app2content" element={<App2Content />} />
                 <Route path="about" element={<About />} />
                 <Route path="*" element={<ErrorPage />} />
               </Routes>
