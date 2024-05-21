@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CounterButton from "./CounterButton";
 
 export default function HomeContent() {
@@ -12,6 +13,11 @@ export default function HomeContent() {
         <h2>Counter button in home-remote</h2>
         <CounterButton></CounterButton>
       </div>
+
+
+      <Link id="app1" to="/app1">
+                Go to App 1
+              </Link>
     </>
   );
 }

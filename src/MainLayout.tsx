@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./Footer";
 import Nav from "./Nav";
 import HomeContent from "./HomeContent";
+import App1Home from "app1/App1Home";
+import App1Content from "app1/App1Content";
 import About from "./About";
 import ErrorPage from "./ErrorPage";
 
@@ -19,10 +21,10 @@ export default function MainLayout() {
             {/* col 2 */}
             <div className="my-10">
               <Routes>
-                <Route path="/" element={<MainLayout />} />
-                <Route index element={<HomeContent></HomeContent>} />
-                {/*               <Route path="App 1" element={<App1/>} />
-              <Route path="App 2" element={<App2/>} /> */}
+                <Route path="/" element={<HomeContent />} />
+                {/* <Route index element={<HomeContent></HomeContent>} /> */}
+                <Route path="app1" element={<App1Home />} />
+                <Route path="app1content" element={<App1Content />} />
                 <Route path="about" element={<About />} />
                 <Route path="*" element={<ErrorPage />} />
               </Routes>

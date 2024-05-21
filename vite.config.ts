@@ -11,6 +11,13 @@ export default defineConfig({
       filename: "remoteEntry.js",
       exposes: {
         "./CounterButton": "./src/CounterButton",
+        "./MainLayout": "./src/MainLayout",
+        "./Nav": "./src/Nav",
+        "./Footer": "./src/Footer",
+        "./ErrorPage": "./src/ErrorPage",
+      },
+      remotes: {
+        app1: "http://localhost:3001/assets/remoteEntry.js",
       },
       shared: ["react", "react-dom"],
     }),
