@@ -16,7 +16,7 @@ export default function CounterButton() {
       </button>
 
       <h1>h1 in remote CounterButton gray-600?</h1>
-      <h2>h2 from remote</h2>
+      <h2>h2 from CounterButton</h2>
       <button className="blue-button">blue-button</button>
     </div>
   );

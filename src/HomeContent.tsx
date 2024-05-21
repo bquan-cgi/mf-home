@@ -10,7 +10,7 @@ export default function HomeContent() {
       </div>
 
       <div className="bg-green-200 m-3 p-4">
-        <h2>Counter button in home-remote</h2>
+        <h2>H2 in main cyan-200, Counter button in home-remote</h2>
         <CounterButton></CounterButton>
       </div>
 
