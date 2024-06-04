@@ -9,12 +9,14 @@ import App2Home from "app2/App2Home";
 import App2Content from "app2/App2Content";
 import About from "./About";
 import ErrorPage from "./ErrorPage";
+import Header from "./Header";
 
 export default function MainLayout() {
   return (
     <Router>
       <div className="container mx-auto bg-slate-100 h-dvh">
         <div className="flex flex-col h-full">
+          <Header></Header>
           {/* row 1 */}
           <div className="flex flex-row h-full">
             {/* col 1 */}

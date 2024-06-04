@@ -1,23 +1,21 @@
-import { Link } from "react-router-dom";
-import CounterButton from "./CounterButton";
+//import CounterButton from "./CounterButton";
+import CounterButton1 from "app1/CounterButton";
+import CounterButton2 from "app2/CounterButton";
 
 export default function HomeContent() {
   return (
     <>
       <div className="container mx-auto p-4 bg-orange-300">
-        <h1>H1 default in remote home bg-gray-400</h1>
-        <h1 className="bg-blue-400">H1 bg-blue-400 in home-remote</h1>
+        <h1>Shell App home</h1>
       </div>
 
       <div className="bg-green-200 m-3 p-4">
-        <h2>H2 in main cyan-200, Counter button in home-remote</h2>
-        <CounterButton></CounterButton>
+        <CounterButton1></CounterButton1>
       </div>
 
-
-      <Link id="app1" to="/app1">
-                Go to App 1
-              </Link>
+      <div>
+        <CounterButton2></CounterButton2>
+      </div>
     </>
   );
 }
