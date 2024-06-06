@@ -11,22 +11,22 @@ export default function Nav() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link id="app1" to="/app1">
+              <Link to="/app1">
                 App 1
               </Link>
             </li>
             <li>
-              <Link id="app2" to="/app2">
+              <Link to="/app2">
                 App 2
               </Link>
             </li>
             <li>
-              <Link id="about" to="/about">
+              <Link to="/about">
                 About us
               </Link>
             </li>
             <li>
-              <Link id="nan" to="/nan">
+              <Link to="/nan">
                 NaN
               </Link>
             </li>

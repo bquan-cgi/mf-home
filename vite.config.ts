@@ -20,7 +20,7 @@ export default defineConfig({
         app1: "http://localhost:3001/assets/remoteEntry.js",
         app2: "http://localhost:3002/assets/remoteEntry.js",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "react-router-dom"],
     }),
   ],
   build: {
