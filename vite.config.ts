@@ -19,6 +19,7 @@ export default defineConfig({
       remotes: {
         app1: "http://localhost:3001/assets/remoteEntry.js",
         app2: "http://localhost:3002/assets/remoteEntry.js",
+        app3: "http://localhost:3003/assets/remoteEntry.js",
       },
       shared: ["react", "react-dom", "react-router-dom"],
     }),

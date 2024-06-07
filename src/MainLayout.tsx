@@ -9,6 +9,7 @@ import App1Content from "app1/App1Content";
 import App1Detail from "app1/App1Detail";
 import App2Home from "app2/App2Home";
 import App2Content from "app2/App2Content";
+import App3Home from "app3/App3Home";
 import About from "./About";
 import ErrorPage from "./ErrorPage";
 import Header from "./Header";
@@ -34,6 +35,7 @@ export default function MainLayout() {
                 <Route path="login" element={<Login />} />
                 <Route path="about" element={<About />} />
                 <Route path="*" element={<ErrorPage />} />
+                <Route path="app3" element={<App3Home />} />
 
                 <Route element={<ProtectedRoute />}>
                   <Route path="app1" element={<App1 />}>

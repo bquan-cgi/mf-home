@@ -21,6 +21,11 @@ export default function Nav() {
               </Link>
             </li>
             <li>
+              <Link to="/app3">
+                App 3
+              </Link>
+            </li>
+            <li>
               <Link to="/about">
                 About us
               </Link>
