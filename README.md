@@ -124,7 +124,7 @@ export default function CounterButton() {
 
 Let's take a closer look at the important settings
 
-```json
+```ts
 // vite.config.ts
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -285,7 +285,7 @@ What important here is the format path of the import `app1/App1Layout`
 - The first part `app1` is the name/key of the remote app, which is unique and defined in the shell app.
 - The second part `App1Layout` is the name of the remote (layout)component from the remote app.
 
-```json
+```ts
 // vite.config.ts of shell app
     federation({
       name: "shell_app",
@@ -299,7 +299,7 @@ What important here is the format path of the import `app1/App1Layout`
     }),
 ```
 
-```json
+```ts
 // vite.config.ts of app 1
     federation({
       name: "app1",
