@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "remote_app",
+      name: "shell_app",
       filename: "remoteEntry.js",
       exposes: {
         "./CounterButton": "./src/CounterButton",
