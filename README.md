@@ -6,6 +6,7 @@
 - [How to create micro frontends with Module Federation](#mf)
 - [The Demo App](#dm)
   - [GroupUI integration](#gui)
+- [About](#about)
 
 # <a id="mfa"></a>Key Concept of micro frontend architecture (MFA)
 
@@ -19,16 +20,17 @@ Nowadays the frontedns are often developed as single page apps(SPA), such as Rea
 - Framework or technologies difficult to update
 - Performace issues, difficult to scale
 
-<img src="images/nomf.png" alt="Monolithic Frontends approach" style="width:900px;"/>
+<img src="https://devstack.vwgroup.com/confluence/download/attachments/3216087350/nomf.png?api=v2" alt="Monolithic Frontends approach" style="width:900px;"/>
 
 For larger and more complex applications, other frontend architectures such as **Microfrontends** may be more suitable.
 
 ## The Micro frontend architecture
-The term Micro Frontends first came up in [ThoughtWorks Technology Radar](https://www.thoughtworks.com/radar/techniques/micro-frontends) at the end of 2016. It extends the concepts of micro services of the backend to the frontend world. 
+
+The term Micro Frontends first came up in [ThoughtWorks Technology Radar](https://www.thoughtworks.com/radar/techniques/micro-frontends) at the end of 2016. It extends the concepts of micro services of the backend to the frontend world.
 
 The idea behind Micro Frontends is to split a web app into samll, reusable web modules/components, which are owned and developed by independent teams. Each team has a distinct area of business or mission it cares about and specialises in. A team is cross functional and develops its features end-to-end, from database to user interface.
 
-<img src="images/withmf.png" alt="Monolithic Frontends approach" style="width:900px;"/>
+<img src="https://devstack.vwgroup.com/confluence/download/attachments/3216087350/withmf.png?api=v2" alt="Micro Frontends approach" style="width:900px;"/>
 
 ### The concept with Micro frontends
 
@@ -126,8 +128,8 @@ Let's take a closer look at the important settings
 
 ```ts
 // vite.config.ts
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
 
 // https://vitejs.dev/config/
@@ -140,12 +142,11 @@ export default defineConfig({
       exposes: {
         "./CounterButton": "./src/CounterButton", // This makes the CounterButton available to other apps. Each to be exposed component should be defined here.
       },
-      remotes: {
-      },
+      remotes: {},
       shared: ["react", "react-dom"],
     }),
   ],
-})
+});
 ```
 
 - **name** A meaningful and unique name for this exposed remote app
@@ -211,7 +212,7 @@ export default function HomeContent() {
 }
 ```
 
-![](images/counterbutton.png)
+![](https://devstack.vwgroup.com/confluence/download/attachments/3216087350/counterbutton.png?api=v2)
 
 ### Layout & Routing
 
@@ -301,13 +302,13 @@ What important here is the format path of the import `app1/App1Layout`
 
 ```ts
 // vite.config.ts of app 1
-    federation({
-      name: "app1",
-      filename: "remoteEntry.js",
-      exposes: {
-        "./App1Layout": "./src/App1Layout",
-      },
-    })
+federation({
+  name: "app1",
+  filename: "remoteEntry.js",
+  exposes: {
+    "./App1Layout": "./src/App1Layout",
+  },
+});
 ```
 
 ```ts
@@ -336,7 +337,7 @@ export default function App1Layout() {
 
 Using the `<Outlet />`-tag we can display the pages of app 1 and have the navigation menu always on the top.
 
-![](images/app1.png)
+![](https://devstack.vwgroup.com/confluence/download/attachments/3216087350/app1.png?api=v2)
 
 A common scene in the host app is, this app used as a
 
@@ -346,11 +347,12 @@ To avoid version conflicts in the host app between different remote components (
 For example, `<GroupuiButton />` will change to `<Groupui1010Button />` if the new version is 10.1.0.
 
 ## Install GroupUI
+
 Add GroupUI reference in packages.json
+
 ```
 https://groupui.vwapps.run/specific/10.1.0/versioned/group-ui-react.tgz
 ```
-
 
 For more details to install GroupUI, please refer to https://digitaldesign.volkswagen-group.com/document/1717#/getting-started/developing
 
@@ -382,3 +384,20 @@ If one App should be upgraded, following changes must be made
 ```
 
 An ultility function during the package update will also be avaible, so that all css classes and GroupUI tags will be automatically updated. The only change that should be made manually is just to change the package version in the `packages.json`. This makes the update safer and more comfortable
+
+### State management with jotai
+
+With React state management libraries such as jotai, it is possible to share state between remote and host.
+
+![](https://devstack.vwgroup.com/confluence/download/attachments/3216087350/sharestate.png?api=v2)
+
+If we click the counter button in app 1, the counter in header, which is a part of the shell app, will be synced immediately.
+
+### Pass parameters between apps
+
+TBD
+
+# <a id="mf"></a> About
+
+You can find the latest version of the source codes and document
+[here](https://github.com/bquan-cgi/mf-home/tree/main)

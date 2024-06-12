@@ -20,7 +20,7 @@ export default function MainLayout() {
     <Router>
       <div className="container mx-auto bg-slate-100 h-dvh">
         <div className="flex flex-col h-full">
-          {/* <Header></Header> */}
+          <Header></Header>
           {/* row 1 */}
           <div className="flex flex-row h-full">
             {/* col 1 */}

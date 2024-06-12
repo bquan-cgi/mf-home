@@ -12,11 +12,11 @@
   }
 
   h3 {
-    @apply text-5xl text-red-200 bg-blue-300;
+    @apply text-5xl text-red-800 bg-blue-300;
   }
 
   button {
-    @apply text-red-600 bg-gray-300 m-4 p-2;
+    @apply text-red-600 bg-green-300 m-4 p-2;
   }
 
   aside {
@@ -31,7 +31,7 @@
 @layer components {
   /* This won't be included in your compiled CSS unless you actually use it */
   .blue-button {
-    @apply bg-blue-500 px-4;
+    @apply bg-blue-500 px-4 rounded;
   }
 
   .h h2 {
