@@ -6,7 +6,7 @@
 - [How to create micro frontends with Module Federation](#mf)
 - [The Demo App](#dm)
   - [GroupUI integration](#gui)
-- [About](#about)
+- [Source code Repos](#repo)
 
 # <a id="mfa"></a>Key Concept of micro frontend architecture (MFA)
 
@@ -397,7 +397,7 @@ If we click the counter button in app 1, the counter in header, which is a part 
 
 TBD
 
-# <a id="mf"></a> About
+# <a id="repo"></a> About
 
 You can find the latest version of the source codes and document
 [here](https://github.com/bquan-cgi/mf-home/tree/main)
